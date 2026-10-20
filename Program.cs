@@ -279,7 +279,7 @@ while (true)
             string studentname = Console.ReadLine();
 
             Console.Write("Enter Student Age: ");
-            int studentage = int.Parse(Console.ReadLine());
+            int studentage = Convert.ToInt32(Console.ReadLine());
 
             Student student = new Student(studentid, studentname, studentage);
 
@@ -306,11 +306,7 @@ while (true)
             Console.Write("Enter Instructor Specialization: ");
             string specialization = Console.ReadLine();
 
-            Instructor instructor = new Instructor(
-                instructorId,
-                instructorName,
-                specialization
-            );
+            Instructor instructor = new Instructor(instructorId,instructorName,specialization);
 
             bool instructorResult = school.AddInstructor(instructor);
 
