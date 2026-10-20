@@ -34,9 +34,7 @@ class Student
 
     public string PrintDetails()
     {
-        string details = "Student ID: " + StudentId
-                       + " Name: " + Name
-                       + " Age: " + Age;
+        string details = "Student ID: " + StudentId + " Name: " + Name+ " Age: " + Age;
 
         for (int i = 0; i < Courses.Count; i++)
         {
@@ -268,6 +266,10 @@ while (true)
 
     Console.Write("Choose an option: ");
     string choice = Console.ReadLine();
+	if (choice == null)
+   {
+       return;
+   }
 
     switch (choice)
     {
